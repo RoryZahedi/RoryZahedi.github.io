@@ -1,0 +1,73 @@
+h1 {
+    text-indent: 50px;  
+    font-size: 26px;
+    line-height: 40px ;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color:#424242;
+    font-weight: lighter;
+}
+
+.entirenav{
+    flex: row;
+    
+}
+
+
+.nav{
+  overflow: hidden;
+  float: right;
+}
+
+.nav a{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#424240;
+    display: inline;
+    word-spacing: 30px;
+    margin-right: 50px;
+    text-decoration:none;
+}
+
+.nav a:hover, a:focus {
+    text-decoration:underline;
+}
+
+.nav .icon{
+  display: none;
+}
+
+
+img {
+  width: 15%; 
+  margin-left: 20%; 
+  vertical-align:middle;
+  /* position:relative; */
+}
+
+
+
+.About{
+  font-family: 'Times New Roman', Times, serif;
+  color:#424240;
+  margin-left: 60%;
+  font-size: 300%;
+  margin-top: 5%;
+  flex: auto;
+  text-decoration: underline;
+
+}
+
+.aboutparagraph{
+  margin-top: 2%;
+  margin-left: 18%;
+  display: inline-block;
+  flex: auto;
+  max-width: 50ch;
+}
+
+/* #wrapper{
+      width:100%;
+      margin:0 auto;
+ } */
