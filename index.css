@@ -28,6 +28,36 @@ img {
     padding-left: 200px;
 }
 
+.TABody li, .ULABody li, .CodepathBody li {
+    width: 60%;
+}
+
+
+.Projects{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 2;
+    
+}
+
+.ProjectBody li {
+    width: 80%;
+}
+
+
+/* Add a background color to the section bodies */
+.ProjectBody{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 100px;
+}
 
 
 
