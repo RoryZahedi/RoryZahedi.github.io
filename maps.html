@@ -1,0 +1,78 @@
+<div id="map" style="width:100%; height:100%;"></div>
+
+<script>
+    var map;
+var markers = [];
+var infoWindow;
+function initMap() {
+    var sandsCoord = {lat: 34.4080, lng: -119.87894207498087};
+    var devsCoord = {lat: 34.40844092324053, lng:-119.87602383157382};
+    var peskiesCoord = {lat:  34.408805, lng: -119.85882720615153};
+    var campusCoord = {lat: 34.404472, lng: -119.844075}
+    var polesCoord  = {lat:34.407985, lng:-119.841490}
+
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: sandsCoord,
+        zoom: 13
+    });
+    infoWindow = new google.maps.InfoWindow();
+    var sandsMarker = new google.maps.Marker({
+        position: sandsCoord,
+        title: 'Sands',
+        content: 'Spot: Sands\n Type:Beach Break'
+    });
+    var devsMarker = new google.maps.Marker({
+        position: devsCoord,
+        title: 'Devs',
+        content: 'Spot: Devs\n Type:Pointbreak'
+    });
+    var peskiesMarker = new google.maps.Marker({
+        position: peskiesCoord,
+        title: 'Peskies',
+        content: 'Spot: Pescadero\'s \n Type:Beach Break'
+    });
+    var campusMarker = new google.maps.Marker({
+        position: campusCoord,
+        title: 'Campus Point',
+        content: 'Spot: Campus Point\n Type:Point Break'
+    });
+    var polesMarker = new google.maps.Marker({
+        position: polesCoord,
+        title: 'Poles',
+        content: 'Spot: Poles\n'
+    });
+    markers = [sandsMarker,devsMarker,peskiesMarker,campusMarker,polesMarker];
+    markers.forEach(function(marker) {
+        var marker = new google.maps.Marker({
+            position: marker.position,
+            map: map,
+            title: marker.title,
+            content: marker.content
+        });
+
+        marker.addListener('click', function() {
+            infoWindow.setContent(marker.content);
+            infoWindow.open(map, marker);
+        });
+    });
+}
+initMap();
+
+    
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCit591EZC5WPSa43_WlLcIq-Hbd3XRm-0&callback=initMap">
+</script>
+
+<style>
+  #map
+
+  .gm-style-iw {
+        width: 180px; /* desired width */
+        height: 80px; /* desired height */
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+    }
