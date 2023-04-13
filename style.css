@@ -10,6 +10,10 @@ body {
     text-align: center;
     padding: 20px;
 }
+
+.disclaimer {
+    padding: 20px;
+}
   
 header {
     background-color: #333;
